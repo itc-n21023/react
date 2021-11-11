@@ -1,9 +1,14 @@
-import React, { useState } from "react"
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
 
-const App {
-  return <h1>hello</h1>
-  )
-}
+const LoginButton = (props) => (
+  <button onClick = {props.toggleIsLoggedIn}>ログイン</button>
+)
 
-export default App;
+const LogoutButton = (props) => (
+  <button onClick = {props.toggleIsLoggedIn}>ログアウト</button>
+)
+
+
+
+export default LoginControl
