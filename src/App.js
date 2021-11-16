@@ -1,26 +1,24 @@
 import React, { useState } from 'react'
-const ButtonComponent = props => {
-  const [text, setText] = useState('Click me')
-  const f = event => setText('Clicked')
+import './App.css'
+
+const InputSelectBox = () => {
+  const [selectedValue, setSelectedValue] = useState('HTML')
+  const handleChange = (e) => {
+    setSelectedValue(e.target.value)
+  }
   return (
-    <button
-      onClick={f}
-    >
-      {text}
-    </button>
+    <div className='App'>
+      <p>
+         現在選択されている値： 
+        <b>{selectedValue}</b>
+      </p>
+      <select value={selectedValue} onChange={handleChange}>
+        <option value='HTML'>HTML</option>
+        <option value='CSS'>CSS</option>
+        <option value='JavaScript'>JavaScript</option>
+      </select>
+    </div>
   )
 }
 
-const App = props => {
-  const [text, setText] = useState('Click me')
-  const handleClick = event => setText('Clicked')
-  return (
-    <>
-      <ButtonComponent
-        text={text} handleClick={handleClick}
-      />
-    </>
-  )
-}
-
-export default App
+export default InputSelectBox
