@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import GoogleMaps from './Component/GoogleMaps.js'
 import './App.css'
-const 
 
 export default function App () {
   const [values, setValues] = useState([])
