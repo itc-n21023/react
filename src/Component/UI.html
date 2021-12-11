@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+#map-canvas {
+	width: 600px ;
+	height: 600px ;
+}
+	</style>
+</head>
+<body>
+	<!-- canvas -->
+	<div id="map-canvas"></div>
+
+	<script src="//maps.googleapis.com/maps/api/js?key={APIキー}"></script>
+	<script>
+var mapDiv = document.getElementById( "map-canvas" ) ;
+
+var map = new google.maps.Map( mapDiv, {
+	center: new google.maps.LatLng( 35.7100, 139.8107 ) ,
+	zoom: 11 ,
+} ) ;
+	</script>
+</body>
+</html>
